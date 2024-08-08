@@ -3,6 +3,9 @@
   border: 0;
   margin: 0;
 }
+body {
+  font-family: "Roboto", sans-serif;
+}
 .inicio {
   grid-area: inicio;
   background-color: white;
@@ -15,11 +18,16 @@
   background-color: #ecebeb;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: start;
+  padding-left: 2rem;
+}
+.menu h4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .menu p {
-  padding: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pie {
@@ -35,30 +43,70 @@
   background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  gap: 10px;
+  padding-bottom: 0.5rem;
+  padding-left: 10px;
+  padding-right: 30px;
 }
 .grilla img {
   width: 100%;
+  height: 100%;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 8.5fr 0.5fr;
   grid-template-areas:
     "inicio inicio "
     "menu principal"
     "pie pie ";
+  height: 100vh;
 }
 
 .producto {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  justify-content: center;
+  border: 1rem;
+}
+.producto h2 {
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+}
+.producto p {
+  padding-bottom: 2rem;
 }
 .producto img {
-  height: 90%;
   width: 90%;
-  object-fit: cover;
+  height: 50%;
+  object-fit: contain;
+}
+
+.buton {
+  background-color: rgb(173, 171, 171);
+  color: white;
+  width: 80%;
+  height: 10%;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: medium;
+}
+.buton:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+
+.opciones:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+  transition: 0.7s;
+  cursor: pointer;
 }
